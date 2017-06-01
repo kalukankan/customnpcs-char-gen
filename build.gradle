@@ -1,0 +1,51 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+// エンコーディング
+def defaultEncoding = 'UTF-8'
+[compileJava, compileTestJava]*.options*.encoding = defaultEncoding
+
+// ソースと実行ファイルのJava バージョン
+def jdkVersion = 1.8
+sourceCompatibility = jdkVersion
+targetCompatibility = jdkVersion
+
+// 依存関係の解決
+repositories {
+	jcenter()
+}
+
+// 依存ライブラリの設定
+dependencies {
+  // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+	compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+	// https://mvnrepository.com/artifact/junit/junit
+	compile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// eclipse プロジェクトの設定
+import org.gradle.plugins.ide.eclipse.model.SourceFolder
+eclipse {
+	classpath {
+    // 依存している jar の source と javadoc をダウンロードする
+    downloadSources = true    // デフォルトは false
+    downloadJavadoc = true    // javadoc のパスは絶対パスになる
+
+    file {
+      // ソースパスの設定を削除
+      beforeMerged { classpath ->
+        // classpath.entries.clear()
+        classpath.entries.removeAll { it.kind == "src" }
+      }
+
+      // 出力パスを gradle のデフォルトに合わせる
+      whenMerged { classpath ->
+        classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/main/java")      }*.output = "build/classes/main"
+        classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/main/resources") }*.output = "build/resources/main"
+        classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/test/java")      }*.output = "build/classes/test"
+        classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/test/resources") }*.output = "build/resources/test"
+        classpath.entries.removeAll { it.kind == "output" }
+      }
+    }
+  }
+}
