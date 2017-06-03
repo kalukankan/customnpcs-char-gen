@@ -1,5 +1,9 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'application'
+
+// バージョン
+version = '1.11.2.0'
 
 // エンコーディング
 def defaultEncoding = 'UTF-8'
@@ -10,42 +14,59 @@ def jdkVersion = 1.8
 sourceCompatibility = jdkVersion
 targetCompatibility = jdkVersion
 
-// 依存関係の解決
+mainClassName = 'com.google.kalukankan.ccg.Application'
+
+jar.baseName = project.name
+
 repositories {
-	jcenter()
+    jcenter()
+    // mavenCentral()
 }
 
-// 依存ライブラリの設定
 dependencies {
-  // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
-	compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
-	// https://mvnrepository.com/artifact/junit/junit
-	compile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
 }
 
 // eclipse プロジェクトの設定
 import org.gradle.plugins.ide.eclipse.model.SourceFolder
 eclipse {
-	classpath {
-    // 依存している jar の source と javadoc をダウンロードする
-    downloadSources = true    // デフォルトは false
-    downloadJavadoc = true    // javadoc のパスは絶対パスになる
 
-    file {
-      // ソースパスの設定を削除
-      beforeMerged { classpath ->
-        // classpath.entries.clear()
-        classpath.entries.removeAll { it.kind == "src" }
-      }
+    // .classpath の設定
+    classpath {
+        // 依存している jar の source と javadoc をダウンロードする
+        downloadSources = true    // デフォルトは false
+        downloadJavadoc = true    // javadoc のパスは絶対パスになる
 
-      // 出力パスを gradle のデフォルトに合わせる
-      whenMerged { classpath ->
-        classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/main/java")      }*.output = "build/classes/main"
-        classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/main/resources") }*.output = "build/resources/main"
-        classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/test/java")      }*.output = "build/classes/test"
-        classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/test/resources") }*.output = "build/resources/test"
-        classpath.entries.removeAll { it.kind == "output" }
-      }
+        file {
+            // 出力パスを gradle のデフォルトに合わせる
+            whenMerged { classpath ->
+                classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/main/java")      }*.output = "build/classes/main"
+                classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/main/resources") }*.output = "build/resources/main"
+                classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/test/java")      }*.output = "build/classes/test"
+                classpath.entries.findAll { it instanceof SourceFolder && it.path.startsWith("src/test/resources") }*.output = "build/resources/test"
+                //classpath.entries.removeAll { it.kind == "output" }
+            }
+        }
     }
+}
+
+// 成果物にファイル追加 (src/dist 以下に配置したものは自動的に追加されるが、それ以外を追加)
+distZip {
+	into(project.name + "/bin") {
+	    from ('src/main/resources') {
+	    	include '*'
+	    }
+    }
+}
+
+// バッチにクラスパス追加 (startScripts.classpath.add(files('$APP_HOME/conf')) だと %APP_HOME%/lib/conf になってしまうため、プレースホルダー追加後に置換)
+startScripts {
+  classpath = files('src/dist/XxxAPlaceHolderForAConfigxxX') + classpath
+  doLast {
+    def windowsScriptFile = file getWindowsScript()
+    def unixScriptFile    = file getUnixScript()
+    windowsScriptFile.text = windowsScriptFile.text.replace('%APP_HOME%\\lib\\XxxAPlaceHolderForAConfigxxX', '%APP_HOME%\\bin')
+    unixScriptFile.text  = unixScriptFile.text.replace('$APP_HOME/lib/XxxAPlaceHolderForAConfigxxX', '$APP_HOME/bin')
   }
 }

@@ -1,0 +1,549 @@
+{
+    "ReturnToStart": 1b,
+    "NpcInv": [
+    ],
+    "BossColor": 0,
+    "PotionEffect": 0,
+    "Size": 5,
+    "stopAndInteract": 1b,
+    "Resistances": {
+        "Arrow": 1.0f,
+        "Explosion": 1.0f,
+        "Knockback": 1.0f,
+        "Melee": 1.0f
+    },
+    "BossBar": 0b,
+    "RespawnTime": 60,
+    "NpcAngrySound": "customnpcs:human.girl.heroic.cleanse_scourge",
+    "ReactsToFire": 0b,
+    "IgnoreCobweb": 0b,
+    "PositionOffsetZ": 5.0f,
+    "PositionOffsetY": 5.0f,
+    "PositionOffsetX": 5.0f,
+    "LootMode": 1,
+    "TransformHasAI": 0b,
+    "AttackStrenght": 2,
+    "PersistenceRequired": 0b,
+    "id": "customnpcs:customnpc",
+    "MovingPatern": 0,
+    "NpcLines": {
+        "Lines": [
+        ]
+    },
+    "DefendFaction": 0b,
+    "FireIndirect": 0,
+    "NpcVisible": 0,
+    "LinkedNpcName": "",
+    "NpcScenes": {
+        "Scenes": [
+        ]
+    },
+    "MercenaryHiredTime": 0L,
+    "HitSound": "minecraft:entity.arrow.hit",
+    "FindShelter": 0,
+    "GuardTargets": [
+        {
+            "Line": "entity.Blaze.name"
+        },
+        {
+            "Line": "entity.CaveSpider.name"
+        },
+        {
+            "Line": "entity.ElderGuardian.name"
+        },
+        {
+            "Line": "entity.Enderman.name"
+        },
+        {
+            "Line": "entity.Endermite.name"
+        },
+        {
+            "Line": "entity.EvocationIllager.name"
+        },
+        {
+            "Line": "entity.Giant.name"
+        },
+        {
+            "Line": "entity.Guardian.name"
+        },
+        {
+            "Line": "entity.Husk.name"
+        },
+        {
+            "Line": "entity.PigZombie.name"
+        },
+        {
+            "Line": "entity.Silverfish.name"
+        },
+        {
+            "Line": "entity.Skeleton.name"
+        },
+        {
+            "Line": "entity.Spider.name"
+        },
+        {
+            "Line": "entity.Stray.name"
+        },
+        {
+            "Line": "entity.Vex.name"
+        },
+        {
+            "Line": "entity.VindicationIllager.name"
+        },
+        {
+            "Line": "entity.Witch.name"
+        },
+        {
+            "Line": "entity.WitherBoss.name"
+        },
+        {
+            "Line": "entity.WitherSkeleton.name"
+        },
+        {
+            "Line": "entity.Zombie.name"
+        },
+        {
+            "Line": "entity.ZombieVillager.name"
+        }
+    ],
+    "Air": 300s,
+    "TacticalVariant": 1,
+    "Orientation": 0,
+    "ScriptLanguage": "ECMAScript",
+    "HandItems": [
+        {
+        },
+        {
+        }
+    ],
+    "KnockBack": 1,
+    "TransformHasJob": 0b,
+    "ArmorDropChances": [
+        0.085f,
+        0.085f,
+        0.085f,
+        0.085f
+    ],
+    "BurnInSun": 0b,
+    "StandingState": 0,
+    "AttackInvisible": 0b,
+    "HurtTime": 0s,
+    "WalkingRange": 64,
+    "MercenaryInfiniteDays": 0b,
+    "ShotCount": 1,
+    "pDur": 5,
+    "AttackRange": 2,
+    "NpcKillLines": {
+        "Lines": [
+            {
+                "Line": "やったわ！",
+                "Song": "customnpcs:human.girl.heroic.honor_and_glory",
+                "Slot": 0
+            },
+            {
+                "Line": "いい調子ね",
+                "Song": "customnpcs:human.girl.heroic.justice_served",
+                "Slot": 1
+            },
+            {
+                "Line": "いぇーい！",
+                "Song": "",
+                "Slot": 2
+            },
+            {
+                "Line": "ひゃっふ～！",
+                "Song": "",
+                "Slot": 3
+            },
+            {
+                "Line": "やったー！",
+                "Song": "",
+                "Slot": 4
+            }
+        ]
+    },
+    "PotionImmune": 0b,
+    "AvoidsSun": 0b,
+    "MercenaryDisableGui": 0b,
+    "Texture": "customnpcs:textures/entity/elffemale/elffemale.png",
+    "NpcJob": 3,
+    "BurstCount": 1,
+    "NpcAttackLines": {
+        "Lines": [
+            {
+                "Line": "やぁ！",
+                "Song": "",
+                "Slot": 0
+            },
+            {
+                "Line": "えいっ！",
+                "Song": "",
+                "Slot": 1
+            },
+            {
+                "Line": "くらえっ！",
+                "Song": "",
+                "Slot": 2
+            },
+            {
+                "Line": "はぁ！",
+                "Song": "",
+                "Slot": 3
+            },
+            {
+                "Line": "てぃっ！",
+                "Song": "",
+                "Slot": 4
+            }
+        ]
+    },
+    "pSpeed": 10,
+    "pArea": 0,
+    "DeathTime": 0s,
+    "pImpact": 0,
+    "MoveState": 0,
+    "TargetType": 0,
+    "pRender3D": 1b,
+    "MercenaryDayRates": [
+        {
+            "Integer": 1,
+            "Slot": 0
+        },
+        {
+            "Integer": 3,
+            "Slot": 1
+        },
+        {
+            "Integer": 1,
+            "Slot": 2
+        }
+    ],
+    "Motion": [
+        0.0d,
+        -0.0784000015258789d,
+        0.0d
+    ],
+    "CombatRegen": 0,
+    "NpcsTimers": [
+    ],
+    "pEffect": 0,
+    "DistanceToMelee": 0,
+    "NpcStepSound": "",
+    "FireRate": 5,
+    "LeftHanded": 0b,
+    "pEffAmp": 0,
+    "OnGround": 1b,
+    "Dimension": 0,
+    "ImmuneToFire": 0b,
+    "NpcKilledLines": {
+        "Lines": [
+            {
+                "Line": "うぁぁ...",
+                "Song": "",
+                "Slot": 0
+            }
+        ]
+    },
+    "SpecialAggroRange": 14,
+    "Fire": -1s,
+    "ArmorItems": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+    ],
+    "DisablePitch": 0b,
+    "pPhysics": 1b,
+    "TransformHasInv": 0b,
+    "NpcInteractLines": {
+        "Lines": [
+            {
+                "Line": "こんにちわ @p",
+                "Song": "customnpcs:human.girl.heroic.honor_and_glory",
+                "Slot": 0
+            },
+            {
+                "Line": "今日も楽しい一日になるといいね",
+                "Song": "",
+                "Slot": 1
+            }
+        ]
+    },
+    "HurtByTimestamp": 5897,
+    "pSpin": 0b,
+    "NpcHurtSound": "customnpcs:human.girl.heroic.hurt",
+    "pTrail": 0,
+    "CreatureType": 0,
+    "Attributes": [
+        {
+            "Base": 20.0d,
+            "Name": "generic.maxHealth"
+        },
+        {
+            "Base": 0.0d,
+            "Name": "generic.knockbackResistance"
+        },
+        {
+            "Base": 0.25d,
+            "Name": "generic.movementSpeed"
+        },
+        {
+            "Base": 0.0d,
+            "Name": "generic.armor"
+        },
+        {
+            "Base": 0.0d,
+            "Name": "generic.armorToughness"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "generic.followRange"
+        },
+        {
+            "Base": 2.0d,
+            "Name": "generic.attackDamage"
+        }
+    ],
+    "Invulnerable": 0b,
+    "TransformHasDisplay": 0b,
+    "NoFallDamage": 0b,
+    "AbsorptionAmount": 0.0f,
+    "TransformHasRole": 0b,
+    "Name": "エルフ女従者護衛(弓)",
+    "FallDistance": 0.0f,
+    "SkinColor": 16777215,
+    "NpcIdleSound": "customnpcs:human.girl.villager.hm",
+    "MercenaryDialogHired": "私を {days} 日雇ってくれてありがとう",
+    "Weapons": [
+        {
+            "Slot": 0b,
+            "id": "minecraft:bow",
+            "Count": 1b,
+            "Damage": 0s
+        },
+        {
+            "Slot": 1b,
+            "id": "minecraft:arrow",
+            "Count": 5b,
+            "Damage": 0s
+        }
+    ],
+    "NPCDialogOptions": [
+    ],
+    "AggroRange": 16,
+    "DirectLOS": 1b,
+    "HealthRegen": 1,
+    "MercenaryRefuseSoulstone": 0b,
+    "ForgeCaps": {
+    },
+    "HandDropChances": [
+        0.085f,
+        0.085f
+    ],
+    "MercenaryDialogFarewell": "そろそろ家に帰らなきゃ。 {player} またね。",
+    "NpcModelData": {
+        "LegsConfig": {
+            "NotShared": 0b,
+            "ScaleZ": 0.8f,
+            "TransZ": 0.0f,
+            "TransY": -0.037499964f,
+            "TransX": -0.012999997f,
+            "ScaleY": 1.05f,
+            "ScaleX": 0.8f
+        },
+        "BodyConfig": {
+            "NotShared": 0b,
+            "ScaleZ": 0.8f,
+            "TransZ": 0.0f,
+            "TransY": -0.07499993f,
+            "TransX": 0.0f,
+            "ScaleY": 1.05f,
+            "ScaleX": 0.8f
+        },
+        "Eyes": {
+            "Pattern": 0b,
+            "Glint": 1b,
+            "Type": -1b,
+            "PositionY": 1,
+            "SkinColor": 11830381,
+            "PlayerTexture": 0b,
+            "Color": 15892389,
+            "BrowColor": 5982516,
+            "BrowThickness": 4
+        },
+        "LegParts": {
+            "Pattern": 0b,
+            "Type": 0b,
+            "PlayerTexture": 0b,
+            "Color": 16777215
+        },
+        "Parts": [
+            {
+                "Pattern": 0b,
+                "Type": 2b,
+                "PlayerTexture": 1b,
+                "PartName": "breasts",
+                "Color": 16777215
+            }
+        ],
+        "ArmsConfig": {
+            "NotShared": 0b,
+            "ScaleZ": 0.8f,
+            "TransZ": 0.0f,
+            "TransY": -0.06999993f,
+            "TransX": -0.065f,
+            "ScaleY": 1.05f,
+            "ScaleX": 0.8f
+        },
+        "ExtraData": {
+        },
+        "HeadConfig": {
+            "NotShared": 0b,
+            "ScaleZ": 0.8f,
+            "TransZ": 0.0f,
+            "TransY": -0.07499993f,
+            "TransX": 0.0f,
+            "ScaleY": 0.85f,
+            "ScaleX": 0.8f
+        }
+    },
+    "minDelay": 20,
+    "DoorInteract": 1,
+    "MoveSpeed": 5,
+    "TransformEditingModus": 0b,
+    "UsingSkinUrl": 0b,
+    "Leashed": 0b,
+    "SkinUrl": "",
+    "CanSwim": 1b,
+    "MercenaryInv": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "minecraft:wheat",
+                "Count": 1b,
+                "Damage": 0s
+            },
+            {
+                "Slot": 1b,
+                "id": "minecraft:bread",
+                "Count": 1b,
+                "Damage": 0s
+            }
+        ]
+    },
+    "GroundSound": "minecraft:block.stone.break",
+    "MaxHealth": 20,
+    "HideBodyWhenKilled": 0b,
+    "AttackSpeed": 20,
+    "PotionDuration": 5,
+    "maxDelay": 40,
+    "ScriptEnabled": 0b,
+    "Role": 2,
+    "DropChance": [
+        {
+            "Integer": 100,
+            "Slot": 0
+        },
+        {
+            "Integer": 100,
+            "Slot": 1
+        },
+        {
+            "Integer": 100,
+            "Slot": 2
+        },
+        {
+            "Integer": 100,
+            "Slot": 3
+        },
+        {
+            "Integer": 100,
+            "Slot": 4
+        },
+        {
+            "Integer": 100,
+            "Slot": 5
+        },
+        {
+            "Integer": 100,
+            "Slot": 6
+        },
+        {
+            "Integer": 100,
+            "Slot": 7
+        },
+        {
+            "Integer": 100,
+            "Slot": 8
+        }
+    ],
+    "FactionPoints": {
+        "DecreaseFaction1Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFactions1": -1,
+        "OptionFactions2": -1,
+        "OptionFaction1Points": 100,
+        "DecreaseFaction2Points": 0b
+    },
+    "pDamage": 4,
+    "KilledTime": 0L,
+    "MercenaryDaysHired": 0,
+    "AimWhileShooting": 0b,
+    "CanPickUpLoot": 0b,
+    "AttackOtherFactions": 0b,
+    "CanDrown": 1b,
+    "pSize": 5,
+    "CanSprint": 0b,
+    "CanLeap": 0b,
+    "TransformIsActive": 1b,
+    "ForgeData": {
+        "cnpcmarkdata": {
+        }
+    },
+    "MovingState": 1,
+    "MovingPos": 0,
+    "PotionAmp": 0,
+    "OnAttack": 0,
+    "TacticalRadius": 8,
+    "FallFlying": 0b,
+    "MaxExp": 0,
+    "OrderedLines": 0b,
+    "PortalCooldown": 0,
+    "pGlows": 0b,
+    "TransformHasAdvanced": 0b,
+    "TransformHasStats": 0b,
+    "MovementType": 0,
+    "FiringSound": "minecraft:entity.arrow.shoot",
+    "ModRev": 18,
+    "Accuracy": 60,
+    "MinExp": 0,
+    "Armor": [
+    ],
+    "CloakTexture": "",
+    "MercenaryIsFollowing": 1b,
+    "GlowTexture": "",
+    "MaxFiringRange": 15,
+    "pXlr8": 0b,
+    "Scripts": [
+    ],
+    "Health": 20.0f,
+    "pStick": 0b,
+    "MovingPause": 1b,
+    "NpcDeathSound": "customnpcs:human.girl.heroic.death",
+    "FactionID": 0,
+    "Title": "Archer",
+    "TotalTicksAlive": 755481L,
+    "Rotation": [
+        140.17377f,
+        0.0f
+    ],
+    "ShowName": 0,
+    "npcInteracting": 1b,
+    "AvoidsWater": 1b,
+    "NoLivingAnimation": 0b,
+    "SpawnCycle": 0
+}

@@ -1,11 +1,13 @@
-package com.google.kalukankan.ccg;
+package com.google.kalukankan.ccg.dto;
 
 import java.util.Map;
+
+import com.google.kalukankan.ccg.model.CustomJson;
 
 public class CharacterParamGeneratorDto {
 
 	private String texturePath;
-	private Map<String, String> jsonMap;
+	private Map<String, CustomJson> jsonMap;
 
 	public String getTexturePath() {
 		return texturePath;
@@ -15,11 +17,11 @@ public class CharacterParamGeneratorDto {
 		this.texturePath = texturePath;
 	}
 
-	public Map<String, String> getJsonMap() {
+	public Map<String, CustomJson> getJsonMap() {
 		return jsonMap;
 	}
 
-	public void setJsonMap(Map<String, String> jsonMap) {
+	public void setJsonMap(Map<String, CustomJson> jsonMap) {
 		this.jsonMap = jsonMap;
 	}
 }
