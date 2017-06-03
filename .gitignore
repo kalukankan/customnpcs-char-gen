@@ -1,8 +1,15 @@
+# Common
+*.log
+
+# Gradle
+/.gradle/
+build/
+
+# Eclipse
 .project
 .classpath
+.settings
 bin/
-/.gradle/
-.settings/
-build/
-*.log
+
+# Project
 export/
