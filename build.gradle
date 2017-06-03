@@ -53,7 +53,7 @@ eclipse {
 
 // 成果物にファイル追加 (src/dist 以下に配置したものは自動的に追加されるが、それ以外を追加)
 distZip {
-	into(project.name + "/bin") {
+	into(project.name + "-" + version + "/bin") {
 	    from ('src/main/resources') {
 	    	include '*'
 	    }
